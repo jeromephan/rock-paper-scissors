@@ -1,0 +1,25 @@
+.choices-body {
+  background: url("../../assets/bg-triangle.svg") no-repeat center;
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    position: absolute;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0
+    }
+
+    &--bottom {
+      bottom: 0;
+      margin: 0 auto;
+    }
+  }
+}

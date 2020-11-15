@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './components/Header/Header';
+import ChoicesBody from './components/Choices/ChoicesBody';
+import { Container, Grid } from '@material-ui/core';
+import Rules from './components/Rules/Rules';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="app">
+      <Grid
+        container
+        alignItems="center"
+        direction="column">
+        <Header/>
+        <ChoicesBody className="app__choices"/>
+        <Rules/>
+      </Grid>
+    </Container>
   );
-}
+};
 
 export default App;

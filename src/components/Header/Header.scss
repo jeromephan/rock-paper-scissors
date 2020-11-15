@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  border-radius: 2rem;
+  border: 3px solid hsl(217, 16%, 45%);
+  padding: 2rem;
+  width: 100%;
+  max-width: 750px;
+  justify-content: space-between;
+  align-items: stretch;
+}

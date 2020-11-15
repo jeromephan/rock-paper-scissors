@@ -1,0 +1,48 @@
+.choices-button {
+  border: 20px solid black;
+  border-radius: 100%;
+  height: 175px;
+  width: 175px;
+  background: linear-gradient(to top, white, white 95%, lighten(black, 90%) 95%, lighten(black, 90%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(white, 0.3);
+    animation: bounce 3s ease-in-out infinite;
+  }
+
+  &--paper {
+    border-color: hsl(230, 89%, 62%);
+  }
+
+  &--rock {
+    border-color: hsl(349, 71%, 52%);
+  }
+
+  &--scissors {
+    border-color: hsl(39, 89%, 49%);
+  }
+
+  &__icon {
+    height: 50%
+  }
+}
+
+@keyframes bounce {
+  0% {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+    transform: translateY(0);
+  }
+}

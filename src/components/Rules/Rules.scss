@@ -1,0 +1,46 @@
+.rules {
+  &__button {
+    padding: 5px 25px;
+    border: 2px solid hsl(217, 16%, 45%);
+    background: none;
+    border-radius: 0.5rem;
+    color: hsl(217, 16%, 45%);
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: hsl(217, 16%, 45%);
+      color: hsl(237, 49%, 15%);
+    }
+  }
+
+  &__modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__modal-title {
+    font-size: 26px;
+    color: hsl(217, 16%, 45%);
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+  &__modal-button {
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 22px;
+  }
+
+  &__modal-image {
+    display: flex;
+    flex-shrink: 0;
+  }
+}

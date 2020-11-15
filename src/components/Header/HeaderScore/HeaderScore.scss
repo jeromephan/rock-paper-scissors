@@ -1,0 +1,22 @@
+.header-score {
+  display: flex;
+  background: white;
+  border-radius: 1rem;
+  min-width: 10rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+
+  &__text {
+    color: hsl(229, 64%, 46%);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+
+  &__figure {
+    color: hsl(229, 25%, 31%);
+    font-size: 64px;
+    font-weight: bolder;
+  }
+}
