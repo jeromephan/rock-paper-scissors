@@ -17,7 +17,7 @@ export const slice = createSlice({
   reducers: {
     SET_CHOICES: (state, action) => {
       state.player = action.payload.choice;
-      state.computer = generateComputerChoice();
+      state.computer = action.payload.choice ? generateComputerChoice() : null;
     },
   },
 });

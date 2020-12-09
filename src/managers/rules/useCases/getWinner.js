@@ -1,5 +1,5 @@
 import choices from '../../../macros/choices';
-import { draw } from '../../../macros/result';
+import { draw, win, lose } from '../../../macros/result';
 
 const { type: { paper, scissors, rock } } = choices;
 
@@ -14,7 +14,7 @@ export const getWinner = (playerChoice, computerChoice) => {
     return draw;
   }
 
-  return computerChoice === winningMap[playerChoice] ? computerChoice : playerChoice;
+  return computerChoice === winningMap[playerChoice] ? win : lose;
 };
 
 export default {

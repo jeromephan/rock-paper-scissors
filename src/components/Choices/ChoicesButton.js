@@ -11,7 +11,7 @@ const iconsMap = {
   scissors,
 };
 
-const ChoicesButton = ({ choice, className = '' }) => {
+const ChoicesButton = ({ choice, className = '', disabled }) => {
   const dispatch = useDispatch();
 
   const setChoices = (choice) =>
@@ -23,6 +23,7 @@ const ChoicesButton = ({ choice, className = '' }) => {
 
   return (
     <button
+      disabled={disabled}
       onClick={() => setChoices(choice)}
       className={`choices-button choices-button--${choice} ${className}`.trim()}
     >

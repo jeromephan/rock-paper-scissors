@@ -1,5 +1,5 @@
-const getPlayerChoice = ({ player }) => player;
-const getComputerChoice = ({ computer }) => computer;
+export const getPlayerChoice = ({ choices: { player } }) => player;
+export const getComputerChoice = ({ choices: { computer } }) => computer;
 
 const selectors = {
   getPlayerChoice,
