@@ -45,7 +45,7 @@ const ResultBody = ({ className }) => {
 
   return (
     <div className={`${className} result-body`}>
-      <div className='result-body__wrapper'>
+      <div className='result-body__choice-wrapper'>
         <p className='result-body__title'>You picked</p>
         <ChoicesButton
           disabled
@@ -53,17 +53,27 @@ const ResultBody = ({ className }) => {
           choice={playerChoice}
         />
       </div>
-      <div className='result-body__wrapper'>
+      <div
+        className={
+          result
+            ? 'result-body__result-wrapper result-body__shown'
+            : 'result-body__result-wrapper'
+        }
+      >
         <p className='result-body__text'>{resultMap[result]}</p>
         <button onClick={goToChoicesPage} className='result-body__button'>
           Play again
         </button>
       </div>
-      <div className='result-body__wrapper'>
+      <div className='result-body__choice-wrapper'>
         <p className='result-body__title'>The house picked</p>
         <ChoicesButton
           disabled
-          className='result-body__choice result-body__choice--left'
+          className={
+            result
+              ? 'result-body__choice result-body__choice--shown result-body__choice--left'
+              : 'result-body__choice result-body__choice--left'
+          }
           choice={computerChoice}
         />
       </div>

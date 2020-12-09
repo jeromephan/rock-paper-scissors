@@ -2,13 +2,19 @@
   display: flex;
   padding: 5rem 0;
 
-  &__wrapper {
+  &__choice-wrapper {
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
     align-items: center;
     margin: 0 2.5rem;
     justify-content: center;
+  }
+
+  &__result-wrapper {
+      @extend .result-body__choice-wrapper;
+      animation: result 1s ease-in;
+      width: 200px;
   }
 
   &__title {
@@ -36,12 +42,25 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     font-weight: 600;
-    transition: 0.3s;
 
     &:hover {
       cursor: pointer;
       color: hsl(349, 71%, 52%);
       box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  @keyframes result {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    50% {
+        width: 200px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
   }
 }
