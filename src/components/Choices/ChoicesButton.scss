@@ -15,6 +15,11 @@
     animation: bounce 2s ease-in-out infinite;
   }
 
+  &:disabled {
+    cursor: initial;
+    pointer-events: none;
+  }
+
   &--paper {
     border-color: hsl(230, 89%, 62%);
   }

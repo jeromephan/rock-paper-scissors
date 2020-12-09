@@ -36,7 +36,9 @@ const ResultBody = ({ className }) => {
   const goToChoicesPage = () => dispatch(SET_CHOICES({ choice: null }));
 
   useEffect(() => {
-    setResult(getWinner(playerChoice, computerChoice));
+    setTimeout(() => {
+      setResult(getWinner(playerChoice, computerChoice));
+    }, 1500);
   }, [playerChoice]);
 
   useEffect(() => {
@@ -56,7 +58,7 @@ const ResultBody = ({ className }) => {
       <div
         className={
           result
-            ? 'result-body__result-wrapper result-body__shown'
+            ? 'result-body__result-wrapper result-body__result-wrapper--shown'
             : 'result-body__result-wrapper'
         }
       >

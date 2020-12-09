@@ -13,8 +13,14 @@
 
   &__result-wrapper {
       @extend .result-body__choice-wrapper;
-      animation: result 1s ease-in;
-      width: 200px;
+      opacity: 0;
+      width: 0;
+
+      &--shown {
+        animation: result 1s ease-in;
+        opacity: 1;
+        width: 200px;
+      }
   }
 
   &__title {
@@ -22,6 +28,7 @@
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   &__text {
