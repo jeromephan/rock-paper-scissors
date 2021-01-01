@@ -20,7 +20,7 @@ const resultMap = {
   [draw]: 'Draw',
 };
 
-const ResultBody = ({ className }) => {
+const ResultBody = ({ className, 'data-testid': dataTestId }) => {
   const dispatch = useDispatch();
   const playerChoice = useSelector((state) => getPlayerChoice(state));
   const computerChoice = useSelector((state) => getComputerChoice(state));
@@ -46,10 +46,11 @@ const ResultBody = ({ className }) => {
   }, [result]);
 
   return (
-    <div className={`${className} result-body`}>
+    <div data-testid={dataTestId} className={`${className} result-body`}>
       <div className='result-body__choice-wrapper'>
         <p className='result-body__title'>You picked</p>
         <ChoicesButton
+          data-testid='choice-player'
           disabled
           className='result-body__choice result-body__choice--left'
           choice={playerChoice}
@@ -63,7 +64,11 @@ const ResultBody = ({ className }) => {
         }
       >
         <p className='result-body__text'>{resultMap[result]}</p>
-        <button onClick={goToChoicesPage} className='result-body__button'>
+        <button
+          data-testid='button-play-again'
+          onClick={goToChoicesPage}
+          className='result-body__button'
+        >
           Play again
         </button>
       </div>
@@ -71,6 +76,7 @@ const ResultBody = ({ className }) => {
         <p className='result-body__title'>The house picked</p>
         <ChoicesButton
           disabled
+          data-testid='choice-cpu'
           className={
             result
               ? 'result-body__choice result-body__choice--shown result-body__choice--left'

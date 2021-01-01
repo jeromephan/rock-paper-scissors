@@ -8,7 +8,9 @@ const HeaderScore = () => {
   return (
     <div className='header-score'>
       <p className='header-score__text'>SCORE</p>
-      <p className='header-score__figure'>{score}</p>
+      <p data-testid='score' className='header-score__figure'>
+        {score}
+      </p>
     </div>
   );
 };

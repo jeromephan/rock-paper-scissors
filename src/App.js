@@ -12,9 +12,9 @@ const App = () => {
   const playerChoice = useSelector((state) => getPlayerChoice(state));
 
   const body = playerChoice ? (
-    <ResultBody className='app__result' />
+    <ResultBody data-testid='app-result' className='app__result' />
   ) : (
-    <ChoicesBody className='app__choices' />
+    <ChoicesBody data-testid='app-choices' className='app__choices' />
   );
 
   return (

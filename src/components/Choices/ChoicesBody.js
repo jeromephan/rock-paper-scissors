@@ -2,8 +2,8 @@ import './ChoicesBody.scss';
 import ChoicesButton from './ChoicesButton';
 import choicesMacros from '../../macros/choices';
 
-const ChoicesBody = ({ className }) => (
-  <div className={`${className} choices-body`}>
+const ChoicesBody = ({ className, 'data-testid': dataTestId }) => (
+  <div data-testid={dataTestId} className={`${className} choices-body`}>
     <ChoicesButton
       className='choices-body__button choices-body__button--left'
       choice={choicesMacros.type.paper}

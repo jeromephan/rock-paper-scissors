@@ -35,30 +35,23 @@ const Rules = () => {
   // getModalStyle is not a pure function, we roll the style only on the first render
 
   return (
-    <div className="rules">
+    <div className='rules'>
       <button
+        data-testid='button'
         onClick={() => setIsModalOpen(true)}
-        className="rules__button">
+        className='rules__button'
+      >
         RULES
       </button>
       <Modal
+        data-testid='modal'
         open={isModalOpen}
-        onClose={() => setIsModalOpen(false)}>
-        <div
-          style={modalStyle}
-          className={`${classes.paper} rules__modal`}>
-          <p className="rules__modal-title">
-            RULES
-          </p>
-          <img
-            className="rules__modal-button"
-            alt="close"
-            src={close}/>
-          <img
-            className="rules__modal-image"
-            alt="rules"
-            src={rules}
-          />
+        onClose={() => setIsModalOpen(false)}
+      >
+        <div style={modalStyle} className={`${classes.paper} rules__modal`}>
+          <p className='rules__modal-title'>RULES</p>
+          <img className='rules__modal-button' alt='close' src={close} />
+          <img className='rules__modal-image' alt='rules' src={rules} />
         </div>
       </Modal>
     </div>
